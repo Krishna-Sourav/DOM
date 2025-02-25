@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        p{
+            font-size: 60px;
+            margin-left: 550px;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+        table tr td {
+            border: 2px solid white;
+            font-size: 30px;
+            padding-left:20px ;
+        }
+        label{
+            padding-right: 18px;
+        }
+        .d1{
+            border: 3px solid white;
+            width : 275px;
+            margin-left: 600px;
+            margin-top: 180px;
+            
+        }
+        input{
+            font-size: 15px;
+            margin-left: 10px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <p>Sample calculator</p>
+    <div class = 'd1'>
+        <table>
+            <tr>
+                <td>
+                    <label for = 'v1'>A</label>
+                    <input type = 'text' placeholder = "Enter a val for A " id = 'v1' required autofocus class = 'tbs1'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for = 'v2'>B</label>
+                    <input type = 'text' placeholder = "Enter a val for B " id = 'v2' required  class = 'tbs1'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for = 'v3'>C</label>
+                    <input type = 'text' placeholder = "Result" id = 'v3'  class = 'tbs1'>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value = '+' class = "bts1" onclick = 'mysum()'>
+                    <input type="button" value = '-' class = "bts1" onclick = 'mydiff()'>
+                    <input type="button" value = '*' class = "bts1" onclick = 'mypro()'>
+                    <input type="button" value = '/' class = "bts1" onclick = 'mydiv()'>
+                    <input type="button" value = '%' class = "bts1" onclick = 'myrem()'>
+                    <input type="button" value = '<=' class = "bts1" onclick = 'clearvals()'>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        mysum = () => {
+            a = parseInt(document.getElementById('v1').value)
+            b = parseInt(document.getElementById('v2').value)
+            c = a+b            
+            c = parseInt(document.getElementById('v3').value=c)
+        }
+        mydiff = () => {
+            a = parseInt(document.getElementById('v1').value)
+            b = parseInt(document.getElementById('v2').value)
+            c = a-b            
+            c = parseInt(document.getElementById('v3').value=c)
+        }
+        mypro = () => {
+            a = parseInt(document.getElementById('v1').value)
+            b = parseInt(document.getElementById('v2').value)
+            c = a*b            
+            c = parseInt(document.getElementById('v3').value=c)
+        }
+        mydiv = () => {
+            a = parseInt(document.getElementById('v1').value)
+            b = parseInt(document.getElementById('v2').value)
+            c = a/b            
+            c = parseInt(document.getElementById('v3').value=c)
+        }
+        myrem = () => {
+            a = parseInt(document.getElementById('v1').value)
+            b = parseInt(document.getElementById('v2').value)
+            c = a%b            
+            c = parseInt(document.getElementById('v3').value=c)
+        }
+        clearvals = () => {
+            a = document.getElementById('v1').value = ""
+            b = document.getElementById('v2').value = ""          
+            c = document.getElementById('v3').value = ""
+        }
+    </script>
+</body>
+</html>
