@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK BOX</title>
+</head>
+<body>
+    <form>
+        <label for = 'select'>Select an option</label>
+        <select id = 'select' multiple onchange = change()>
+            <option value = 'book'>book</option>
+            <option value = 'pen'>pen</option>
+            <option value = 'pencil'>pencil</option>
+            <option value = 'eraser'>eraser</option>
+        </select>
+    </form>
+    <p id = "names">Selected Vals display here </p>
+    <script>
+        change = () => {
+            x = []
+            y = document.getElementById('select')
+            for(i = 0 ; i < y.options.length ; i++){
+                if(y.options[i].selected){
+                    x.push(y.options[i].value)
+                }
+            }
+            document.getElementById('names').innerText = 'selected vals : ' + x.join(' , ')
+        }
+    </script>
+</body>
+</html>
