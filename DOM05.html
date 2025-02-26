@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Conversions</title>
+</head>
+<body>
+
+    <label for="temp_val">Give Temp: </label>
+    <input type="text" id="temp_val">
+    <input type="button" value="Convert to Celcius" onclick="convert2cel()">
+    <input type="button" value="Convert to Farenheit" onclick="convert2far()">
+    <label id="Result"></label>
+
+    <script>
+        convert2cel = () => {
+            temp = parseFloat(document.getElementById('temp_val').value);
+            temp = (temp - 32) * (5/9);
+            document.getElementById('Result').innerText = "Converted Temp = " + temp.toFixed(2) + "°C";
+        }
+
+        convert2far = () => {
+            temp = parseFloat(document.getElementById('temp_val').value);
+            temp = (temp * (9/5)) + 32;
+            document.getElementById('Result').innerText = "Converted Temp = " + temp.toFixed(2) + "°F";
+        }
+    </script>
+
+</body>
+</html>
