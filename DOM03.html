@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combo Box</title>
+</head>
+<body>
+    <label>ITEMS</label>
+    <select id = "selector" onchange = "change()">
+        <option value = "BOOK">BOOK</option>
+        <option value = "PEN">PEN</option>
+        <option value = "PENCIL">PENCIL</option>
+        <option value = "ERASER">ERASER</option>
+        <option value = "SCALE">SCALE</option>
+        <option value = "BAG">BAG</option>
+    </select>
+
+    <script>
+        change = () =>{
+            x = document.getElementById('selector').value
+            document.getElementById('tab').innerText = "SELECTED VAL :- " + x
+        }
+    </script>
+
+    <table>
+        <tr>
+            <td>
+                <p id = 'tab'></p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
